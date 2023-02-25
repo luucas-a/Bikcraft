@@ -1,0 +1,204 @@
+* {
+  /* Zera todas margins e paddin do HTML */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  /* Colocando a font-size padrão  valendo 10px cada 1 rem */
+
+  --ff-body: 'arial', sans-serif;
+  /* Criação de variavel de fonte */
+  --cl-red: #ee2211
+    /* cor para os links A */
+}
+
+body {
+  font-family: var(--ff-body);
+  /* Inclui a variavel fonte do root no font-family */
+  background-color: #f7f7f7;
+  font-size: 1.6rem;
+  /* mudando a cor de fundo do corpo */
+}
+
+p {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  /* retirar o sublinhado da lista */
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  /* deixando a imagem com largura maxima dela para não ficar estourando a tela toda */
+}
+
+header {
+
+  margin-top: 4rem;
+  display: grid;
+  /* deixando em grid para poder manipular e alinhar o conteudo */
+
+  gap: 5.0rem;
+  /* deixando um gap entre o h1 e menu de navegacao */
+
+
+}
+
+h1 {
+  display: flex;
+  /* colocando em flex para manipulacao e alinhamento com a navegacao */
+
+  justify-content: center;
+  /* alinhando o h1 ao centro */
+}
+
+header ul {
+  display: flex;
+  gap: 2.0rem;
+  list-style: none;
+  /* retirando as bolinhas da lista */
+
+  flex-wrap: wrap;
+  /* quando a tela dor diminuindo ele ir quebrando  */
+  justify-content: center;
+  /* quando ele for quebrando ir alinhando ao centro */
+}
+
+header ul li a {
+  display: block;
+  color: #000000;
+  background-color: #ffffff;
+
+  padding: 1.5rem 3.0rem;
+  border-radius: 4px;
+  margin-bottom: 3.0rem;
+
+  border-left: 4px solid #ffffff;
+}
+
+header a:hover {
+  padding-left: 30px;
+  border-left: 4px solid var(--cl-red);
+  display: inline-block;
+}
+
+header a:focus {
+  border: 2px solid var(--cl-red);
+  outline: none;
+}
+
+
+#intro {
+  position: relative;
+}
+
+a,
+h3 {
+  transition: .2s;
+}
+
+#intro h2::before {
+  position: absolute;
+  content: "";
+  top: 3rem;
+  right: -3rem;
+  width: 6rem;
+
+  border: 2px solid var(--cl-red);
+}
+
+#intro a:hover {
+  background-color: red;
+  font-weight: bold;
+}
+
+#intro a:focus {
+  border: 4px solid var(--cl-red);
+  outline: none;
+}
+
+#conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  /* border: 2px red solid; */
+  margin: 0 auto;
+}
+
+article#intro {
+  background-color: #ffffff;
+  display: grid;
+  align-content: center;
+  gap: 2rem;
+  justify-items: end;
+  padding: 4rem;
+  text-align: right;
+}
+
+
+article#intro a {
+  background-color: var(--cl-red);
+  color: #ffffff;
+  padding: 1.5rem 3.0rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+#advantage-bikcraft {
+  display: grid;
+  background-color: #f7f7f7;
+}
+
+#advantage-bikcraft h2 {
+  display: grid;
+  align-content: center;
+  font-size: 6.4rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #c6c6c6;
+
+  background-image: url(/img/onda.svg);
+}
+
+#advantage-bikcraft h2:hover {
+  font-size: 7rem;
+  transition: 0.5s;
+}
+
+#advantage {
+  background-color: #ffffff;
+  display: grid;
+}
+
+.advantage-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem 2rem;
+  padding: 4rem;
+}
+
+.advantage-item p {
+  grid-column: 2;
+}
+
+.advantage-item:hover {
+  padding-left: 30px;
+  border-left: 4px solid var(--cl-red);
+}
+
+.advantage-item:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+footer p {
+  background-color: #FFFFFF;
+  padding: 4rem;
+  text-align: center;
+}
