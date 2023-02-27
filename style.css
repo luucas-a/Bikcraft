@@ -202,3 +202,25 @@ footer p {
   padding: 4rem;
   text-align: center;
 }
+
+@media (max-width: 780px) {
+
+  #conteudo {
+    /* border: 2px solid red; */
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  #intro h2::before {
+    display: none;
+  }
+
+  article#intro {
+    text-align: center;
+  }
+
+  article#intro a,
+  #title-primary {
+    margin: 0 auto;
+  }
+}
