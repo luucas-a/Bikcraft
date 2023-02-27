@@ -167,6 +167,10 @@ article#intro a {
   background-image: url(https://raw.githubusercontent.com/luucas-a/Bikcraft/0d126c1ce666d5e8c39126488f16da624692b328/img/onda.svg);
 }
 
+#advantage-bikcraft {
+  position: relative;
+}
+
 #advantage-bikcraft h2:hover {
   font-size: 7rem;
   transition: 0.5s;
@@ -204,10 +208,11 @@ footer p {
 }
 
 @media (max-width: 780px) {
+
   #conteudo,
   #title,
   ul {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     grid-template-columns: 1fr;
     max-width: 550px;
     margin: 0 auto;
