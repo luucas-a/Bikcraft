@@ -204,11 +204,13 @@ footer p {
 }
 
 @media (max-width: 780px) {
-
-  #conteudo {
-    /* border: 2px solid red; */
+  #conteudo,
+  #title,
+  ul {
+    border: 2px solid red;
     grid-template-columns: 1fr;
-    max-width: 500px;
+    max-width: 550px;
+    margin: 0 auto;
   }
 
   #intro h2::before {
