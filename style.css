@@ -6,21 +6,40 @@
 }
 
 :root {
-  font-size: 62.5%;
   /* Colocando a font-size padrão  valendo 10px cada 1 rem */
+  font-size: 62.5%;
 
+  /* Criação de variável de fonte */
   --ff-body: 'arial', sans-serif;
-  /* Criação de variavel de fonte */
-  --cl-red: #ee2211
-    /* cor para os links A */
+
+  /* cor para os links A */
+  --cl-link: #ee2211;
+  --cl-link-strong: #990000;
+
+  /* Cor boddy */
+  --cl-boddy-primaria: #ffffff;
+
+  /* cor background */
+  --bg-boddy: #f7f7f7;
+
+
+  /* Cor texto */
+  --texto: #000000
 }
 
 body {
-  font-family: var(--ff-body);
   /* Inclui a variavel fonte do root no font-family */
-  background-color: #f7f7f7;
-  font-size: 1.6rem;
+  font-family: var(--ff-body);
+  
+  /* cor de texto */
+  color: var(--texto);
+  
   /* mudando a cor de fundo do corpo */
+  background: var(--bg-boddy);
+  
+  /* colocando o tamanho dos textos em 16px */
+  font-size: 1.6rem;
+
 }
 
 p {
@@ -50,12 +69,8 @@ header {
 
 }
 
-h1 {
-  display: flex;
-  /* colocando em flex para manipulacao e alinhamento com a navegacao */
-
-  justify-content: center;
-  /* alinhando o h1 ao centro */
+.svg-header {
+  margin: 0 auto;
 }
 
 header ul {
@@ -72,24 +87,24 @@ header ul {
 
 header ul li a {
   display: block;
-  color: #000000;
-  background-color: #ffffff;
+  color: var(--texto);
+  background-color: var(--cl-boddy-primaria);
 
   padding: 1.5rem 3.0rem;
   border-radius: 4px;
   margin-bottom: 3.0rem;
-
-  border-left: 4px solid #ffffff;
+  border: 2px solid var(--cl-boddy-primaria);
+  border-left: 4px solid var(--cl-boddy-primaria);
 }
 
 header a:hover {
   padding-left: 30px;
-  border-left: 4px solid var(--cl-red);
+  border-left: 4px solid var(--cl-link);
   display: inline-block;
 }
 
 header a:focus {
-  border: 2px solid var(--cl-red);
+  border: 2px solid var(--cl-link);
   outline: none;
 }
 
@@ -110,16 +125,16 @@ h3 {
   right: -3rem;
   width: 6rem;
 
-  border: 2px solid var(--cl-red);
+  border: 2px solid var(--cl-link);
 }
 
 #intro a:hover {
-  background-color: red;
+  background-color: var(--cl-link);
   font-weight: bold;
 }
 
 #intro a:focus {
-  border: 4px solid var(--cl-red);
+  border: 4px solid var(--cl-link);
   outline: none;
 }
 
@@ -132,7 +147,7 @@ h3 {
 }
 
 article#intro {
-  background-color: #ffffff;
+  background-color: var(--cl-boddy-primaria);
   display: grid;
   align-content: center;
   gap: 2rem;
@@ -143,8 +158,8 @@ article#intro {
 
 
 article#intro a {
-  background-color: var(--cl-red);
-  color: #ffffff;
+  background-color: var(--cl-link);
+  color: var(--cl-boddy-primaria);
   padding: 1.5rem 3.0rem;
   border-radius: 4px;
   text-transform: uppercase;
@@ -152,7 +167,7 @@ article#intro a {
 
 #advantage-bikcraft {
   display: grid;
-  background-color: #f7f7f7;
+  background-color: var(--bg-boddy);
 }
 
 #advantage-bikcraft h2 {
@@ -177,7 +192,7 @@ article#intro a {
 }
 
 #advantage {
-  background-color: #ffffff;
+  background-color: var(--cl-boddy-primaria);
   display: grid;
 }
 
@@ -194,15 +209,15 @@ article#intro a {
 
 .advantage-item:hover {
   padding-left: 30px;
-  border-left: 4px solid var(--cl-red);
+  border-left: 4px solid var(--cl-link);
 }
 
 .advantage-item:nth-child(odd) {
-  background-color: #f7f7f7;
+  background-color: var(--bg-boddy);
 }
 
 footer p {
-  background-color: #FFFFFF;
+  background-color: var(--cl-boddy-primaria);
   padding: 4rem;
   text-align: center;
 }
